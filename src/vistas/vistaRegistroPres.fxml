@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" styleClass="panelfondo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" styleClass="panelfondo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vistas.VistaRegistroPresController">
    <children>
       <Label layoutX="22.0" layoutY="307.0" styleClass="labell" stylesheets="@newCascadeStyleSheet.css" text="Orden" />
       <JFXTextField focusColor="#c37869" layoutX="22.0" layoutY="323.0" prefWidth="175.0" />

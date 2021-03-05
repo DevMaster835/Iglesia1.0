@@ -5,6 +5,8 @@
  */
 package controladores;
 
+import conexion.conexion;
+import java.sql.Connection;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -17,7 +19,7 @@ import javafx.stage.Stage;
  *
  * @author José
  */
-public class Parroquia extends Application {
+public class main extends Application {
     
     @Override
     public void start(Stage primaryStage) {
@@ -39,6 +41,10 @@ public class Parroquia extends Application {
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        conexion con = new conexion();
+       Connection cone = con.openConnection();
+       
     }
 
     /**

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1090.0" styleClass="panelfondo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1090.0" styleClass="panelfondo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vistas.VistaLoginController">
    <children>
       <Pane layoutX="545.0" prefHeight="600.0" prefWidth="545.0" styleClass="fondologin" stylesheets="@newCascadeStyleSheet.css">
          <children>
@@ -20,8 +20,8 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="#c88477" layoutX="134.0" layoutY="225.0" prefHeight="25.0" prefWidth="263.0" promptText="Usuario" />
-      <JFXPasswordField focusColor="#c88477" layoutX="135.0" layoutY="313.0" prefHeight="25.0" prefWidth="263.0" promptText="Contraseña" />
+      <JFXTextField fx:id="txtusuario" focusColor="#c88477" layoutX="134.0" layoutY="225.0" prefHeight="25.0" prefWidth="263.0" promptText="Usuario" />
+      <JFXPasswordField fx:id="txtcontraseña" focusColor="#c88477" layoutX="135.0" layoutY="313.0" prefHeight="25.0" prefWidth="263.0" promptText="Contraseña" />
       <JFXButton layoutX="135.0" layoutY="389.0" prefHeight="25.0" prefWidth="263.0" styleClass="buttonlogin" stylesheets="@../css/style.css" text="Ingresar" textFill="WHITE">
          <font>
             <Font size="18.0" />
