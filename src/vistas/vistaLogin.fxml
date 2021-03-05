@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1090.0" styleClass="panelfondo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="545.0" prefHeight="600.0" prefWidth="545.0" styleClass="fondologin" stylesheets="@newCascadeStyleSheet.css">
+         <children>
+            <Pane layoutY="-4.0" opacity="0.85" prefHeight="608.0" prefWidth="545.0" styleClass="fondologin2" stylesheets="@../css/style.css" />
+         </children>
+      </Pane>
+      <Label layoutX="205.0" layoutY="156.0" text="Iniciar Sesión">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="#c88477" layoutX="134.0" layoutY="225.0" prefHeight="25.0" prefWidth="263.0" promptText="Usuario" />
+      <JFXPasswordField focusColor="#c88477" layoutX="135.0" layoutY="313.0" prefHeight="25.0" prefWidth="263.0" promptText="Contraseña" />
+      <JFXButton layoutX="135.0" layoutY="389.0" prefHeight="25.0" prefWidth="263.0" styleClass="buttonlogin" stylesheets="@../css/style.css" text="Ingresar" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="73.0" layoutY="39.0" text="Parroquia Nuestra Señora de Los Dolores">
+         <font>
+            <Font name="SansSerif Regular" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
