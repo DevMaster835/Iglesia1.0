@@ -22,9 +22,9 @@
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtlibro" focusColor="#c88477" layoutX="38.0" layoutY="93.0" prefHeight="25.0" prefWidth="183.0" />
-      <JFXTextField fx:id="txtfolio" focusColor="#c88477" layoutX="243.0" layoutY="91.0" prefHeight="25.0" prefWidth="183.0" />
-      <JFXDatePicker fx:id="txtfecha" defaultColor="#c88477" layoutX="438.0" layoutY="89.0" prefHeight="25.0" prefWidth="189.0" />
+      <JFXTextField fx:id="txtlibro" focusColor="#c88477" layoutX="38.0" layoutY="93.0" onKeyTyped="#txtlibroKeyTyped" prefHeight="25.0" prefWidth="183.0" />
+      <JFXTextField fx:id="txtfolio" focusColor="#c88477" layoutX="243.0" layoutY="91.0" onKeyTyped="#txtfolioKeyTyped" prefHeight="25.0" prefWidth="183.0" />
+      <JFXDatePicker fx:id="txtfecha" defaultColor="#c88477" editable="false" layoutX="438.0" layoutY="89.0" prefHeight="25.0" prefWidth="189.0" />
       <Pane prefHeight="65.0" prefWidth="1090.0" styleClass="panelprueba" stylesheets="@newCascadeStyleSheet.css">
          <children>
             <AnchorPane opacity="0.9" prefHeight="65.0" prefWidth="1090.0" styleClass="panel1" stylesheets="@../css/style.css">
@@ -33,17 +33,17 @@
                </children></AnchorPane>
          </children>
       </Pane>
-      <JFXButton fx:id="btnGuardar" layoutX="640.0" layoutY="568.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@newCascadeStyleSheet.css" text="Ingresar" textFill="WHITE">
+      <JFXButton fx:id="btnGuardar" layoutX="640.0" layoutY="568.0" onAction="#registrarBautismo" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Ingresar" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnEliminar" layoutX="905.0" layoutY="568.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@newCascadeStyleSheet.css" text="Eliminar" textFill="WHITE">
+      <JFXButton fx:id="btnEliminar" layoutX="905.0" layoutY="568.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Eliminar" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnModificar" layoutX="772.0" layoutY="568.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@newCascadeStyleSheet.css" text="Modificar" textFill="WHITE">
+      <JFXButton fx:id="btnModificar" layoutX="772.0" layoutY="568.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Modificar" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
