@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXRadioButton?>
@@ -33,17 +34,17 @@
                </children></AnchorPane>
          </children>
       </Pane>
-      <JFXButton fx:id="btnGuardar" layoutX="640.0" layoutY="568.0" onAction="#registrarBautismo" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Ingresar" textFill="WHITE">
+      <JFXButton fx:id="btnGuardar" layoutX="640.0" layoutY="643.0" onAction="#registrarBautismo" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Ingresar" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnEliminar" layoutX="905.0" layoutY="568.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Eliminar" textFill="WHITE">
+      <JFXButton fx:id="btnEliminar" layoutX="905.0" layoutY="643.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Eliminar" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnModificar" layoutX="772.0" layoutY="568.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Modificar" textFill="WHITE">
+      <JFXButton fx:id="btnModificar" layoutX="772.0" layoutY="643.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Modificar" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
@@ -83,76 +84,76 @@
       </Label>
       <JFXTextField fx:id="txtprimerab" focusColor="#c88477" layoutX="42.0" layoutY="304.0" prefWidth="183.0" />
       <JFXTextField fx:id="txtsegundoab" focusColor="#c88477" layoutX="274.0" layoutY="304.0" prefHeight="25.0" prefWidth="206.0" />
-      <Label layoutX="39.0" layoutY="365.0" text="Primer nombre">
+      <Label layoutX="40.0" layoutY="411.0" text="Primer nombre">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="38.0" layoutY="340.0" text="Padre">
+      <Label layoutX="39.0" layoutY="387.0" text="Padre">
          <font>
             <Font name="SansSerif Italic" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtprimernp" focusColor="#c88477" layoutX="40.0" layoutY="378.0" prefWidth="134.0" />
-      <Label layoutX="193.0" layoutY="365.0" text="Segundo nombre">
+      <JFXTextField fx:id="txtprimernp" focusColor="#c88477" layoutX="41.0" layoutY="424.0" prefWidth="134.0" />
+      <Label layoutX="194.0" layoutY="411.0" text="Segundo nombre">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtsegundonp" focusColor="#c88477" layoutX="193.0" layoutY="378.0" prefWidth="134.0" />
-      <JFXTextField fx:id="txttercernp" focusColor="#c88477" layoutX="344.0" layoutY="378.0" prefHeight="25.0" prefWidth="141.0" />
-      <Label layoutX="344.0" layoutY="365.0" text="Tercer nombre">
+      <JFXTextField fx:id="txtsegundonp" focusColor="#c88477" layoutX="194.0" layoutY="424.0" prefWidth="134.0" />
+      <JFXTextField fx:id="txttercernp" focusColor="#c88477" layoutX="345.0" layoutY="424.0" prefHeight="25.0" prefWidth="141.0" />
+      <Label layoutX="345.0" layoutY="411.0" text="Tercer nombre">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="42.0" layoutY="426.0" text="Primer apellido">
+      <Label layoutX="43.0" layoutY="472.0" text="Primer apellido">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="296.0" layoutY="426.0" text="Segundo apellido">
+      <Label layoutX="297.0" layoutY="472.0" text="Segundo apellido">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtprimerap" focusColor="#c88477" layoutX="42.0" layoutY="438.0" prefWidth="183.0" />
-      <JFXTextField fx:id="txtsegundoap" focusColor="#c88477" layoutX="297.0" layoutY="438.0" prefWidth="183.0" />
-      <Label layoutX="42.0" layoutY="487.0" text="Madre">
+      <JFXTextField fx:id="txtprimerap" focusColor="#c88477" layoutX="43.0" layoutY="484.0" prefWidth="183.0" />
+      <JFXTextField fx:id="txtsegundoap" focusColor="#c88477" layoutX="298.0" layoutY="484.0" prefWidth="183.0" />
+      <Label layoutX="43.0" layoutY="533.0" text="Madre">
          <font>
             <Font name="SansSerif Italic" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="42.0" layoutY="514.0" text="Primer nombre">
+      <Label layoutX="43.0" layoutY="560.0" text="Primer nombre">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtprimernm" focusColor="#c88477" layoutX="43.0" layoutY="526.0" prefWidth="134.0" />
-      <Label layoutX="196.0" layoutY="513.0" text="Segundo nombre">
+      <JFXTextField fx:id="txtprimernm" focusColor="#c88477" layoutX="44.0" layoutY="572.0" prefWidth="134.0" />
+      <Label layoutX="197.0" layoutY="559.0" text="Segundo nombre">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtsegundonm" focusColor="#c88477" layoutX="196.0" layoutY="526.0" prefWidth="134.0" />
-      <JFXTextField fx:id="txttercernm" focusColor="#c88477" layoutX="347.0" layoutY="526.0" prefHeight="25.0" prefWidth="141.0" />
-      <Label layoutX="347.0" layoutY="513.0" text="Tercer nombre">
+      <JFXTextField fx:id="txtsegundonm" focusColor="#c88477" layoutX="197.0" layoutY="572.0" prefWidth="134.0" />
+      <JFXTextField fx:id="txttercernm" focusColor="#c88477" layoutX="348.0" layoutY="572.0" prefHeight="25.0" prefWidth="141.0" />
+      <Label layoutX="348.0" layoutY="559.0" text="Tercer nombre">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="48.0" layoutY="572.0" text="Primer apellido">
+      <Label layoutX="49.0" layoutY="618.0" text="Primer apellido">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="310.0" layoutY="573.0" text="Segundo apellido">
+      <Label layoutX="311.0" layoutY="619.0" text="Segundo apellido">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtprimeram" focusColor="#c88477" layoutX="48.0" layoutY="589.0" prefWidth="183.0" />
-      <JFXTextField fx:id="txtsegundoam" focusColor="#c88477" layoutX="310.0" layoutY="589.0" prefWidth="183.0" />
+      <JFXTextField fx:id="txtprimeram" focusColor="#c88477" layoutX="49.0" layoutY="635.0" prefWidth="183.0" />
+      <JFXTextField fx:id="txtsegundoam" focusColor="#c88477" layoutX="311.0" layoutY="635.0" prefWidth="183.0" />
       <Label layoutX="244.0" layoutY="79.0" text="No. folio">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
@@ -247,10 +248,26 @@
          </font>
       </Label>
       <JFXComboBox fx:id="cmbpresbitero" focusColor="#c37869" layoutX="841.0" layoutY="91.0" prefWidth="183.0" />
-      <Label fx:id="lblad" layoutX="34.0" layoutY="669.0" text="Label" textFill="RED">
+      <Label fx:id="lblad" layoutX="224.0" layoutY="671.0" text="Label" textFill="RED">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <Label layoutX="45.0" layoutY="342.0" text="Lugar nacimiento">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmblugarnac" layoutX="39.0" layoutY="357.0" prefHeight="25.0" prefWidth="183.0" />
+      <JFXCheckBox fx:id="cbxcomunion" layoutX="278.0" layoutY="344.0" text="Primera Comunión">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="cbxconfirma" layoutX="278.0" layoutY="373.0" text="Confirma">
+         <font>
+            <Font name="SansSerif Regular" size="13.0" />
+         </font>
+      </JFXCheckBox>
    </children>
 </AnchorPane>

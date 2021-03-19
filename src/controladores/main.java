@@ -32,7 +32,7 @@ public class main extends Application {
         
         try {
             FXMLLoader loader= new FXMLLoader();
-            loader.setLocation(main.class.getResource("/vistas/vistaBautismo.fxml"));
+            loader.setLocation(main.class.getResource("/vistas/vistaRegistroPres.fxml"));
             Pane ventana = (Pane) loader.load();    
             Scene scene= new Scene(ventana);
             primaryStage.setScene(scene);
@@ -43,7 +43,7 @@ public class main extends Application {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         } 
         
-        conexion con = new conexion();
+       conexion con = new conexion();
        Connection cone = con.openConnection();
        
     }

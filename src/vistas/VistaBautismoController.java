@@ -5,13 +5,21 @@
  */
 package vistas;
 
+import conexion.conexion;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
+import com.mysql.jdbc.Connection;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -100,16 +108,47 @@ public class VistaBautismoController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    PreparedStatement pps;
+    conexion con = new conexion();
+    Connection cone = (Connection) con.openConnection();
+    
+    @FXML
+    private JFXComboBox<?> cmblugarnac;
+    @FXML
+    private JFXCheckBox cbxcomunion;
+    @FXML
+    private JFXCheckBox cbxconfirma;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         lblad.setVisible(false);
+        cargarParroco();
         
+    }
+    
+    public void cargarParroco(){
+        try {
+            String sql="SELECT parroco_presbitero.id_p, nombres_presbitero.id_nombre, nombres_presbitero.orden_nombre, nombre.nombre FROM parroco_presbitero, nombre, nombres_presbitero, apellido, apellidos_presbitero WHERE nombres_presbitero.id_nombre=nombre.id_nombre AND apellidos_presbitero.id_apellido=apellido.id_apellido AND parroco_presbitero.id_p=nombres_presbitero.id_p AND parroco_presbitero.id_p=apellidos_presbitero.id_p and parroco_presbitero.parroco=1 AND parroco_presbitero.parroco=1 \n" +
+                    "\n" +
+                    "UNION SELECT parroco_presbitero.id_p, apellidos_presbitero.id_apellido, apellidos_presbitero.orden_apellido, apellido.apellido FROM parroco_presbitero, nombre, nombres_presbitero, apellido, apellidos_presbitero WHERE nombres_presbitero.id_nombre=nombre.id_nombre AND apellidos_presbitero.id_apellido=apellido.id_apellido AND parroco_presbitero.id_p=nombres_presbitero.id_p AND parroco_presbitero.id_p=apellidos_presbitero.id_p and parroco_presbitero.parroco=1";
+            PreparedStatement ps1=cone.prepareStatement(sql);
+            ResultSet rs1= ps1.executeQuery();
+            
+            while(rs1.next()){
+                String nombre= rs1.getString("orden_nombre");
+//                String apellido= rs1.getString("apellido.apellido");
+                txtparroco.setText(nombre /*+ " " + apellido*/);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(VistaBautismoController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     
     @FXML
     public void registrarBautismo(){
+        
         
         int genero = 0;
 
@@ -117,6 +156,22 @@ public class VistaBautismoController implements Initializable {
             genero = 1;
         } else if (rdbF.isSelected() == true) {
             genero = 2;
+        }
+        
+        int lugarnac = cmblugarnac.getSelectionModel().getSelectedIndex() + 1;
+        int presb = cmbpresbitero.getSelectionModel().getSelectedIndex() + 1;
+        int comu;
+        if(cbxcomunion.isSelected()){
+            comu=1;
+        }else{
+            comu=0;
+        }
+        
+        int confir;
+        if(cbxconfirma.isSelected()){
+            confir=1;
+        }else{
+            confir=0;
         }
         
         if(txtlibro.getText().isEmpty()){
@@ -130,20 +185,20 @@ public class VistaBautismoController implements Initializable {
         if(txtfecha.getValue()==null){
             lblad.setVisible(true);
             lblad.setText("La fecha no puede estar vacía");
-        }else
+       /* }else
         if(txtparroco.getText().isEmpty()){
             lblad.setVisible(true);
             lblad.setText("El parroco no puede estar vacío");
         }else
         if(cmbpresbitero.getValue()==null){
             lblad.setVisible(true);
-            lblad.setText("El presbítero no puede estar vacío");
+            lblad.setText("El presbítero no puede estar vacío");*/
         }else
         if(genero==0){
             lblad.setVisible(true);
             lblad.setText("Indique el género del bautizado");
             
-        }else
+       /* }else
          if(txtprimernb.getText().isEmpty()){
              lblad.setVisible(true);
              lblad.setText("El primer nombre del bautizado no puede ir vacío");
@@ -181,8 +236,27 @@ public class VistaBautismoController implements Initializable {
                lblad.setText("El primer nombre del segundo padrino no puede ir vacío");        
         }else
             if(txtprimerapad2.getText().isEmpty()){
-                
+               lblad.setVisible(true);
+               lblad.setText("El primer apellido del segundo padrino no puede ir vacío");*/
+        }else{
+             
+            try {
+                pps= cone.prepareStatement("INSERT INTO sacramento (no_libro, folio, id_parroco, fecha_bautismo, "
+                        + "id_presbitero, lugar_nac, primera_comunion, confirma) VALUES(?,?,?,?,?,?,?,?)");
+                pps.setString(1, txtlibro.getText());
+                pps.setString(2, txtfolio.getText());
+                pps.setString(3, /*txtparroco.getText()*/"1");
+                pps.setString(4, txtfecha.getValue().toString());
+                pps.setString(5, /*String.valueOf(presb)*/"1");
+                pps.setString(6, /*String.valueOf(lugarnac)*/ "12");
+                pps.setString(7, String.valueOf(comu));
+                pps.setString(8, String.valueOf(confir));
+                pps.executeUpdate();
+            } catch (SQLException ex) {
+                Logger.getLogger(VistaBautismoController.class.getName()).log(Level.SEVERE, null, ex);
             }
+            }
+           
         
     }
 
