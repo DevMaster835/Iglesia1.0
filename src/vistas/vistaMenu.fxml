@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1049.0" styleClass="panelfondo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1049.0" styleClass="panelfondo" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vistas.VistaMenuController">
    <children>
       <Pane prefHeight="65.0" prefWidth="1090.0" styleClass="panelprueba" stylesheets="@newCascadeStyleSheet.css">
          <children>
@@ -18,17 +18,17 @@
          </children>
       </Pane>
       <Pane layoutX="57.0" layoutY="95.0" prefHeight="6.0" prefWidth="296.0" style="-fx-background-color: BA7365;" />
-      <JFXButton alignment="TOP_LEFT" layoutX="57.0" layoutY="101.0" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Matrimonio" textFill="#c37869">
+      <JFXButton alignment="TOP_LEFT" layoutX="57.0" layoutY="101.0" onAction="#irMatrimonio" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Matrimonio" textFill="#c37869">
          <font>
             <Font name="SansSerif Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="TOP_LEFT" layoutX="385.0" layoutY="101.0" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Bautismo" textFill="#c37869">
+      <JFXButton alignment="TOP_LEFT" layoutX="385.0" layoutY="101.0" onAction="#irbautismo" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Bautismo" textFill="#c37869">
          <font>
             <Font name="SansSerif Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="TOP_LEFT" layoutX="725.0" layoutY="101.0" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Registro" textFill="#c37869">
+      <JFXButton alignment="TOP_LEFT" layoutX="725.0" layoutY="101.0" onAction="#irpresbiteros" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Párrocos / Presbiteros" textFill="#c37869">
          <font>
             <Font name="SansSerif Bold" size="20.0" />
          </font>
@@ -36,22 +36,16 @@
       <Pane layoutX="725.0" layoutY="95.0" prefHeight="6.0" prefWidth="296.0" style="-fx-background-color: BA7365;" />
       <Pane layoutX="385.0" layoutY="95.0" prefHeight="6.0" prefWidth="296.0" style="-fx-background-color: BA7365;" />
       <Pane layoutX="58.0" layoutY="179.0" prefHeight="6.0" prefWidth="296.0" style="-fx-background-color: BA7365;" />
-      <JFXButton alignment="TOP_LEFT" layoutX="58.0" layoutY="185.0" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Matrimonio" textFill="#c37869">
+      <JFXButton alignment="TOP_LEFT" layoutX="58.0" layoutY="185.0" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="null" textFill="#c37869">
          <font>
             <Font name="SansSerif Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="TOP_LEFT" layoutX="386.0" layoutY="185.0" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Bautismo" textFill="#c37869">
+      <JFXButton alignment="TOP_LEFT" layoutX="386.0" layoutY="185.0" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="null" textFill="#c37869">
          <font>
             <Font name="SansSerif Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="TOP_LEFT" layoutX="726.0" layoutY="185.0" prefHeight="65.0" prefWidth="296.0" styleClass="btnmenu" stylesheets="@../css/style.css" text="Registro" textFill="#c37869">
-         <font>
-            <Font name="SansSerif Bold" size="20.0" />
-         </font>
-      </JFXButton>
-      <Pane layoutX="726.0" layoutY="179.0" prefHeight="6.0" prefWidth="296.0" style="-fx-background-color: BA7365;" />
       <Pane layoutX="386.0" layoutY="179.0" prefHeight="6.0" prefWidth="296.0" style="-fx-background-color: BA7365;" />
    </children>
 </AnchorPane>

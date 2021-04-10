@@ -26,12 +26,12 @@
             </AnchorPane>
          </children>
       </Pane>
-      <JFXButton layoutX="114.0" layoutY="535.0" onAction="#registrarPresbitero" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Ingresar" textFill="WHITE">
+      <JFXButton layoutX="193.0" layoutY="489.0" onAction="#registrarPresbitero" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Ingresar" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="379.0" layoutY="535.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Actualizar" textFill="WHITE">
+      <JFXButton layoutX="352.0" layoutY="489.0" prefHeight="36.0" prefWidth="121.0" styleClass="botones" stylesheets="@../css/style.css" text="Actualizar" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
@@ -39,20 +39,20 @@
       <JFXCheckBox fx:id="cbxparroco" checkedColor="#c37869" layoutX="257.0" layoutY="297.0" text="Párroco" />
       <Label layoutX="42.0" layoutY="156.0" styleClass="labell" stylesheets="@../css/style.css" text="Primer nombre">
          <font>
-            <Font name="SansSerif Regular" size="13.0" />
+            <Font name="SansSerif Regular" size="15.0" />
          </font>
       </Label>
       <JFXTextField fx:id="txtprimernp" focusColor="#c88477" layoutX="43.0" layoutY="168.0" onKeyTyped="#txtprimernpKeyTyped" prefWidth="175.0" />
       <Label layoutX="237.0" layoutY="155.0" styleClass="labell" stylesheets="@../css/style.css" text="Segundo nombre">
          <font>
-            <Font name="SansSerif Regular" size="13.0" />
+            <Font name="SansSerif Regular" size="15.0" />
          </font>
       </Label>
       <JFXTextField fx:id="txtsegundonp" focusColor="#c88477" layoutX="237.0" layoutY="168.0" onKeyTyped="#txtsegundonpKeyTyped" prefWidth="175.0" />
       <JFXTextField fx:id="txttercernp" focusColor="#c88477" layoutX="432.0" layoutY="168.0" onKeyTyped="#txttercernpKeyTyped" prefHeight="25.0" prefWidth="161.0" />
       <Label layoutX="432.0" layoutY="155.0" styleClass="labell" stylesheets="@../css/style.css" text="Tercer nombre">
          <font>
-            <Font name="SansSerif Regular" size="13.0" />
+            <Font name="SansSerif Regular" size="15.0" />
          </font>
       </Label>
       <Label layoutX="42.0" layoutY="219.0" styleClass="labell" stylesheets="@../css/style.css" text="Primer apellido">
@@ -73,5 +73,10 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <JFXButton fx:id="btnBuscar" layoutX="432.0" layoutY="226.0" onAction="#buscarPresbitero" prefHeight="36.0" prefWidth="130.0" styleClass="botones" stylesheets="@../css/style.css" text="Buscar Presbíteros" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

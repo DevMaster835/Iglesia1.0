@@ -5,11 +5,14 @@
  */
 package vistas;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import conexion.conexion;
+import controladores.main;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,11 +23,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import modelos.OrdenesPresbitero;
 
 /**
@@ -63,6 +72,8 @@ public class VistaRegistroPresController implements Initializable {
     
     conexion con =  new conexion();
     Connection cone= con.openConnection();
+    @FXML
+    private JFXButton btnBuscar;
     
      /**
      * Initializes the controller class.
@@ -335,7 +346,7 @@ public class VistaRegistroPresController implements Initializable {
                         idp=rst.getInt("count(id_p)");
                         System.out.print("Id pres: " + idp);
                     }
-            //GUARDA LOS NOMBRES EN TABLA NOMBRES Y PARROCO_PRESBITERO        
+            //GUARDA LOS NOMBRES EN TABLA NOMBRES Y NOMBRES_PRESBITERO        
             if(txtsegundonp.getText().isEmpty() && txttercernp.getText().isEmpty()){
                    pps=cone.prepareStatement("SELECT id_nombre, nombre FROM nombre WHERE nombre=?");
                    pps.setString(1, txtprimernp.getText());
@@ -442,7 +453,7 @@ public class VistaRegistroPresController implements Initializable {
                 }
              //GUARDA TRES NOMBRES DEL PRESBITERO   
             }else{
-               pps=cone.prepareStatement("SELECT id_nombre, nombre FROM nombre WHERE nombre=?");
+                   pps=cone.prepareStatement("SELECT id_nombre, nombre FROM nombre WHERE nombre=?");
                    pps.setString(1, txtprimernp.getText());
                    ResultSet r1=pps.executeQuery();
                    
@@ -718,6 +729,23 @@ public class VistaRegistroPresController implements Initializable {
         }else{
             lblad.setVisible(false);
         }
+    }
+
+    @FXML
+    private void buscarPresbitero(ActionEvent event) {
+        try {
+            FXMLLoader loader= new FXMLLoader();
+            loader.setLocation(main.class.getResource("/vistas/vistaBuscaPresbitero.fxml"));
+            Pane ventana = (Pane) loader.load();    
+            Scene scene= new Scene(ventana);
+            Stage stage= new Stage();
+            stage.setScene(scene);
+            stage.initStyle(StageStyle.DECORATED);           
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }
     
 }

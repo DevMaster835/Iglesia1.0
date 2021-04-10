@@ -11,13 +11,9 @@ import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -32,11 +28,11 @@ public class main extends Application {
         
         try {
             FXMLLoader loader= new FXMLLoader();
-            loader.setLocation(main.class.getResource("/vistas/vistaRegistroPres.fxml"));
+            loader.setLocation(main.class.getResource("/vistas/vistaMenu.fxml"));
             Pane ventana = (Pane) loader.load();    
             Scene scene= new Scene(ventana);
             primaryStage.setScene(scene);
-            primaryStage.initStyle(StageStyle.UNDECORATED);           
+            primaryStage.initStyle(StageStyle.DECORATED);           
             primaryStage.setResizable(false);
             primaryStage.show();
         } catch (IOException ex) {
