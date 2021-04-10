@@ -128,7 +128,7 @@ public class Bautismo {
                               rs.getString("Madre"),
                               rs.getString("Padre"),
                               rs.getString("Padrino"),
-                              rs.getString("Madrina")
+                              rs.getString("Madrina") /*ayaya*/
                              
                        )
                 );
